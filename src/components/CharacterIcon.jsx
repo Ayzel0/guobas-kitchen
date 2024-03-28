@@ -4,14 +4,12 @@ const CharacterIcon = ({ characterName = 'name', characterImage, className }) =>
   return (
     <div className={`relative ${className}`}>
       <h3 className='text-white text-xl font-semibold pb-2'>{characterName}</h3>
-      <img
-        className='h-[200px]' 
-        src={CharacterIconBackground} 
-      />
-      <img 
-        className='absolute bottom-[26px] h-[160px] left-[20px]'
-        src={characterImage} 
-      />
+      <div className='bg-[url(/src/assets/svgs/CharacterIconBackground.svg)] bg-cover'>
+        <img 
+          src={characterImage}
+          className='p-[10%] -translate-y-[3%]'
+        />
+      </div>
     </div>
   )
 }
